@@ -30,16 +30,19 @@ function setup() {
   ];
 
   // Input Declarations
-  button = createButton('Add Particles');
-  button.position(10, 10);
+  button = createButton('Neue Partikel');
+  button.position(0, 0);
+  button.size(width, 30);
   button.mousePressed(addParticles);
 
-  plus = createButton('Plus');
-  plus.position(10, button.height + 10);
+  plus = createButton('Heißer');
+  plus.position(30, 0);
+  plus.size(width/2, 30);
   plus.mousePressed(faster);
 
-  minus = createButton('Minus');
-  minus.position(10, 10 + plus.height + button.height);
+  minus = createButton('Kälter');
+  minus.position(30, width/2);
+  minus.size(width/2, 30);
   minus.mousePressed(slower);
 
   // start the Engine
